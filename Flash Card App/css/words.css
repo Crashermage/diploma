@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+height: 100%;
+}
+
+::-webkit-scrollbar {
+  height: 1rem;
+  width: .5rem
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb {
+  --tw-border-opacity: 1;
+  background-color: rgba(217,217,227,.8);
+  border-color: rgba(255,255,255, var(--tw-border-opacity));
+  border-radius: 6px;
+  border-width: 1px
+}
+
+::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(236,236,241, var(--tw-bg-opacity))
+}
+
+body {
+  margin: 0;
+  background: white;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+body h1{
+  font-weight: 600;
+}
+
+.table-container {
+  position: relative;
+  width: 75%;
+  color: #e4e4e4;
+  margin: 0 auto;
+  background: #427CBC; 
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: -10px;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+table:hover {
+  cursor: pointer;
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+thead th {
+  background-color: #55608f;
+}
+
+tbody tr:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+tbody td {
+  position: relative;
+}
+
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255,255,255,0.2);
+  z-index: -1;
+}
+
+.highlighted-row {
+  background-color: rgba(255,255,255,0.2);
+  color: black;
+  font-weight: bold;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 12.5%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 16px;
+  color: #427CBC;
+  text-decoration: none;
+  font-weight: 650;
+  margin-right: 30px;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #427CBC;
+  border-radius: 5px;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: .5s;
+}
+
+.navbar a:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.but {
+  width: 35%;
+  margin: 25px 0 15px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.langSel select {
+  font-size: 14.5px;
+  background: transparent;
+  color: #427CBC;
+  border: none;
+  outline: none;
+  font-weight: 650;
+}
+
+.langSel select:focus option {
+  color: black;
+}
+
+
+.a-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.modal {
+  visibility: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, .3);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity .4s, visibility .4s;
+  border-radius: 10px;
+}
+
+.modal input {
+  max-width: 500px;
+}
+
+.modal-content {
+  position: relative;
+  width: 800px;
+  max-width: 800px;
+  padding: 60px;
+  z-index: 1;
+  color:black;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 2px 1px 13px -1px rgba(0, 0, 0, 0.08);
+}
+
+.modal-content button {
+  margin-right: 15px;
+}
+
+.modal-content h2 {
+  font-weight: 550;
+  margin-bottom: 50px;
+  padding: 0;
+}
+
+.modal-content h3 {
+  margin-bottom: 35px;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content .closeModal-btn {
+  position: absolute;
+  border: none;
+  background: transparent;
+  font-size: 36px;
+  top: 10px;
+  right: 10px;
+} 
+
+.modal-content .closeModal-btn:hover {
+  color:black;
+  font-weight: 650;
+  transform: scale(1.025);
+}
+
+.modal .termD span {
+  font-weight: 550;
+}
+
+.modal .termEd span {
+  font-weight: 550;
+}
